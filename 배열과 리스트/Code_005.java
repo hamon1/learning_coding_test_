@@ -18,10 +18,31 @@ public class Code_005 {
 
         int n = sc.nextInt();
         int m = sc.nextInt();
-        int[] arr = new int[n];
+        long[] sum = new long[n];
+        long[] mod = new long[m];
+        long count = 0;
+
+        sum[0] = sc.nextInt();
+        for (int i = 1; i < n; i++) {
+            sum[i] = sum[i-1] + sc.nextInt();
+        }
 
         for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
+            int num = (int)(sum[i] % m);
+
+            if (num == 0) count++;
+
+            mod[num]++;
         }
+
+        for (int i = 0; i < mod.length; i++) {
+            if (mod[i] > 1) {
+                count += (mod[i] * (mod[i] - 1) / 2);  // C(mod[i], 2)
+            }
+        }
+
+        sc.close();
+
+        System.out.println(count);
     }
 }
