@@ -8,6 +8,9 @@
 
 // 출력
 // 첫째 줄에 Swap 횟수를 출력한다
+
+
+//정답이 int를 넘을 수 있었음
 import java.io.*;
 import java.util.*;
 
