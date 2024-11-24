@@ -30,6 +30,10 @@ public class Code_025 {
         // boolean[][] friends = new boolean[n][n];
         LinkedList<Integer>[] friends = new LinkedList[n];
         
+        for (int i = 0; i < n; i++) {
+            friends[i] = new LinkedList<>();
+        }
+
         for (int i = 0; i < m; i++) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
