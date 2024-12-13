@@ -29,7 +29,6 @@ public class Code_040 {
                 list[(int)((j * n) - min)] = true;
             }
         }
-
         
         int count = 0;
 
@@ -39,7 +38,4 @@ public class Code_040 {
 
         System.out.println(count);
     }
-    // static Long is(long num, boolean[] list) {
-        
-    // }
 }
